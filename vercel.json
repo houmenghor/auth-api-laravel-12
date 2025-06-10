@@ -30,7 +30,7 @@
   "env": {
      "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://deploy-laravel-final-project.vercel.app/",
+        "APP_URL": "https://user-api-one-teal.vercel.app/",
         "APP_KEY": "base64:sSwzQ+jTVvm/wqSE/Sd4fSbcG37NZz7unTRx3Zm2YIs=",
         "DB_CONNECTION": "mysql",
         "DB_HOST": "3q355.h.filess.io",
