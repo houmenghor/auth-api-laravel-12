@@ -1,38 +1,39 @@
 {
-  "version": 2,
-  "framework": null,
-  "functions": {
-    "api/index.php": { "runtime": "vercel-php@0.7.3" }
-  },
-  "routes": [
-    {
-      "src": "/css/(.*)",
-      "dest": "/public/css/$1"
+    "version": 2,
+    "framework": null,
+    "functions": {
+        "api/index.php": {
+            "runtime": "vercel-php@0.7.3"
+        }
     },
-    {
-      "src": "/js/(.*)",
-      "dest": "/public/js/$1"
-    },
-    {
-      "src": "/image/(.*)",
-      "dest": "/public/image/$1"
-    },
-    {
-      "src": "/(.*\\.(?:png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
-      "dest": "/public/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-    }
-  ],
-  "outputDirectory": "public",
-  "env": {
-     "APP_ENV": "production",
+    "routes": [
+        {
+            "src": "/css/(.*)",
+            "dest": "/public/css/$1"
+        },
+        {
+            "src": "/js/(.*)",
+            "dest": "/public/js/$1"
+        },
+        {
+            "src": "/image/(.*)",
+            "dest": "/public/image/$1"
+        },
+        {
+            "src": "/(.*\\.(?:png|jpg|jpeg|gif|svg|ico|ttf|woff|woff2|eot|otf|webp|avif|txt))$",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "outputDirectory": "public",
+    "env": {
+        "APP_ENV": "production",
         "APP_DEBUG": "true",
         "APP_URL": "https://user-api-one-teal.vercel.app/",
         "APP_KEY": "base64:sSwzQ+jTVvm/wqSE/Sd4fSbcG37NZz7unTRx3Zm2YIs=",
-        
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
@@ -41,6 +42,10 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
-  }
+        "SESSION_DRIVER": "cookie",
+        "DB_CONNECTION": "d1",
+        "CLOUDFLARE_D1_DATABASE_ID": "your-database-id",
+        "CLOUDFLARE_TOKEN": "your-cloudflare-token",
+        "CLOUDFLARE_ACCOUNT_ID": "your-account-id"
+    }
 }

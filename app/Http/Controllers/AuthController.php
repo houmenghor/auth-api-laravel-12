@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ForgetPassword;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Cache;
 
 class AuthController extends Controller
 {
@@ -147,5 +150,24 @@ class AuthController extends Controller
         return response()->json([
             'message' => 'User deleted successfully'
         ], 200);
+    }
+    public function forgetPassword(Request $request){
+        $request->validate([
+            'email' => ['required','email']
+        ]);
+        $user = User::where('email', $request->input('email'))->first();
+        if(!$user){
+            return response()->json([
+                'result' => false,
+                'message' => 'email not found'
+            ]);
+        }
+        $otp = rand(100000, 999999);
+        Cache::put('opt_sent_' . $user->email,$otp, now()->addMinute(1));
+        Mail::to($user->email)->queue(new ForgetPassword($otp));
+        return response()->json([
+            'result' => true,
+            'message' => 'OPT sent to your email...'
+        ]);
     }
 }
