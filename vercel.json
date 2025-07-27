@@ -32,7 +32,7 @@
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://user-api-one-teal.vercel.app/",
+        "APP_URL": "https://auth-api-laravel-12.vercel.app/",
         "APP_KEY": "base64:sSwzQ+jTVvm/wqSE/Sd4fSbcG37NZz7unTRx3Zm2YIs=",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
@@ -44,8 +44,8 @@
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
         "DB_CONNECTION": "d1",
-        "CLOUDFLARE_D1_DATABASE_ID": "your-database-id",
-        "CLOUDFLARE_TOKEN": "your-cloudflare-token",
-        "CLOUDFLARE_ACCOUNT_ID": "your-account-id"
+        "CLOUDFLARE_D1_DATABASE_ID": "4d675615-bd78-42d4-b652-8bfe04b251d8",
+        "CLOUDFLARE_TOKEN": "5dMYKtC0E8xB1DFh7wRm7Jod5WbB2ZhYNyD7myN3",
+        "CLOUDFLARE_ACCOUNT_ID": "577e46f05185e49e01fad937549ea2a1"
     }
 }

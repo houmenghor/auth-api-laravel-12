@@ -111,6 +111,16 @@ return [
             // 'encrypt' => env('DB_ENCRYPT', 'yes'),
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
+        'd1' => [
+            'driver' => 'd1',
+            'prefix' => '',
+            'database' => env('CLOUDFLARE_D1_DATABASE_ID', '4d675615-bd78-42d4-b652-8bfe04b251d8'),
+            'api' => 'https://api.cloudflare.com/client/v4',
+            'auth' => [
+                'token' => env('CLOUDFLARE_TOKEN', '5dMYKtC0E8xB1DFh7wRm7Jod5WbB2ZhYNyD7myN3'),
+                'account_id' => env('CLOUDFLARE_ACCOUNT_ID', '577e46f05185e49e01fad937549ea2a1'),
+            ],
+        ],
 
     ],
 
@@ -147,7 +157,7 @@ return [
 
         'options' => [
             'cluster' => env('REDIS_CLUSTER', 'redis'),
-            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_').'_database_'),
+            'prefix' => env('REDIS_PREFIX', Str::slug(env('APP_NAME', 'laravel'), '_') . '_database_'),
             'persistent' => env('REDIS_PERSISTENT', false),
         ],
 
